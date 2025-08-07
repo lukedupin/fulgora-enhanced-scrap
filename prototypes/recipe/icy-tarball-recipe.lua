@@ -28,10 +28,10 @@ data:extend({
         category = "recycling",
         subgroup = "other",
         order = "z[recycling]-c[icy-tarball]",
-        icon = "__base__/graphics/icons/recycling.png",
+        icon = "__quality__/graphics/icons/recycling.png",
         icon_size = 64,
         enabled = false,
-        ingredients = {{"icy-tarball", 1}},
+        ingredients = {{type="item", name="icy-tarball", amount=1}},
         results = {
             {type = "item", name = "ice", amount = 1, probability = 0.2},
             {type = "item", name = "coal", amount = 1, probability = 0.2}
