@@ -1,0 +1,6 @@
+require("prototypes.fluid.sludge")
+require("prototypes.item.enhanced-scrape")
+require("prototypes.item.icy-tarball")
+require("prototypes.recipe.enhanced-scrape-recipe")
+require("prototypes.recipe.icy-tarball-recipe")
+require("prototypes.technology.icy-tarball-tech")
