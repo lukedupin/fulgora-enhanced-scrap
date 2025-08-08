@@ -20,30 +20,20 @@ data:extend({
     }
 })
 
--- Enhanced scrap recycling recipe
-data:extend({
-    {
-        type = "recipe",
-        name = "recycling-enhanced-scrap",
-        category = "recycling",
-        subgroup = "other",
-        order = "z[recycling]-b[enhanced-scrap]",
-        icon = "__quality__/graphics/icons/recycler.png",
-        icon_size = 64,
-        enabled = false,
-        ingredients = {{type="item", name="enhanced-scrap", amount=1}},
-        results = {
-            {type = "item", name = "processing-unit", amount = 1, probability = 0.06},
-            {type = "item", name = "advanced-circuit", amount = 1, probability = 0.03},
-            {type = "item", name = "low-density-structure", amount = 1, probability = 0.05},
-            {type = "item", name = "battery", amount = 1, probability = 0.08},
-            {type = "item", name = "steel-plate", amount = 1, probability = 0.04},
-            {type = "item", name = "concrete", amount = 8, probability = 0.06},
-            {type = "item", name = "holmium-ore", amount = 1, probability = 0.05}
-        },
-        energy_required = 0.2,
-        allow_productivity = true,
-        unlock_results = false,
-        hidden = true
-    }
-})
+local enhanced = table.deepcopy(data.raw.recipe['scrap-recycling'])
+enhanced.name = "recycling-enhanced-scrap"
+enhanced.ingredients = {{type="item", name="enhanced-scrap", amount=1}}
+enhanced.results = {
+    {type = "item", name = "iron-gear-wheel", amount = 1, probability = 0.2},
+    {type = "item", name = "concrete", amount = 1, probability = 0.06},
+    {type = "item", name = "steel-plate", amount = 1, probability = 0.04},
+    {type = "item", name = "battery", amount = 1, probability = 0.08},
+    {type = "item", name = "advanced-circuit", amount = 1, probability = 0.03},
+    {type = "item", name = "processing-unit", amount = 1, probability = 0.06},
+    {type = "item", name = "low-density-structure", amount = 1, probability = 0.05},
+    {type = "item", name = "holmium-ore", amount = 1, probability = 0.05},
+    {type = "item", name = "stone", amount = 1, probability = 0.04}
+}
+
+-- Add recycling recipe for ice to create stone
+data:extend({ enhanced })

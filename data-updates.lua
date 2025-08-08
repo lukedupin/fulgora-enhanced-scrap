@@ -2,42 +2,25 @@
 data.raw["tile"]["oil-ocean-shallow"].fluid = "sludge"
 data.raw["tile"]["oil-ocean-deep"].fluid = "sludge"
 
--- Modify existing scrape recycling to produce 20x less output
-if data.raw.recipe["recycling-scrap"] then
-    local recipe = data.raw.recipe["recycling-scrap"]
-    if recipe.results then
-        for _, result in pairs(recipe.results) do
-            if result.amount then
-                result.amount = 20 --math.max(1, math.floor(result.amount / 20))
-            end
-            if result.amount_min then
-                result.amount_min = 20 --math.max(1, math.floor(result.amount_min / 20))
-            end
-            if result.amount_max then
-                result.amount_max = 20 --math.max(1, math.floor(result.amount_max / 20))
-            end
-        end
-    end
-end
+data.raw.item['scrap'].icon = "__fulgora-enhanced-scrap__/graphics/scrap.png"
+data.raw.item['scrap'].pictures =
+{
+    { size = 64, filename = "__fulgora-enhanced-scrap__/graphics/scrap.png",   scale = 0.5, mipmap_count = 4 },
+    { size = 64, filename = "__fulgora-enhanced-scrap__/graphics/scrap-1.png", scale = 0.5, mipmap_count = 4 },
+    { size = 64, filename = "__fulgora-enhanced-scrap__/graphics/scrap-2.png", scale = 0.5, mipmap_count = 4 },
+    { size = 64, filename = "__fulgora-enhanced-scrap__/graphics/scrap-3.png", scale = 0.5, mipmap_count = 4 },
+    { size = 64, filename = "__fulgora-enhanced-scrap__/graphics/scrap-4.png", scale = 0.5, mipmap_count = 4 },
+    { size = 64, filename = "__fulgora-enhanced-scrap__/graphics/scrap-5.png", scale = 0.5, mipmap_count = 4 }
+}
 
--- Add recycling recipe for ice to create stone
-data:extend({
-    {
-        type = "recipe",
-        name = "recycling-ice-enhanced",
-        category = "recycling",
-        subgroup = "other",
-        order = "z[recycling]-a[ice]",
-        icon = "__quality__/graphics/icons/recycling.png",
-        icon_size = 64,
-        enabled = false,
-        ingredients = {{type="item", name="ice", amount=1}},
-        results = {
-            {type = "item", name = "stone", amount = 1, probability = 0.1}
-        },
-        energy_required = 0.2,
-        allow_productivity = true,
-        unlock_results = false,
-        hidden = true
-    }
-})
+data.raw.recipe['scrap-recycling']['results'] = {
+    {type = "item", name = "iron-gear-wheel", amount = 1, probability = 0.02},
+    {type = "item", name = "concrete", amount = 1, probability = 0.006},
+    {type = "item", name = "steel-plate", amount = 1, probability = 0.004},
+    {type = "item", name = "battery", amount = 1, probability = 0.008},
+    {type = "item", name = "advanced-circuit", amount = 1, probability = 0.003},
+    {type = "item", name = "processing-unit", amount = 1, probability = 0.006},
+    {type = "item", name = "low-density-structure", amount = 1, probability = 0.005},
+    {type = "item", name = "stone", amount = 1, probability = 0.005},
+    {type = "item", name = "holmium-ore", amount = 1, probability = 0.01}
+}

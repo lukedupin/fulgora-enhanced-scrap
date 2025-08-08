@@ -1,5 +1,5 @@
 -- Add icy tarball recipe to recycling technology
-if data.raw.technology["recycling"] then
+--if data.raw.technology["recycling"] then
     table.insert(data.raw.technology["recycling"].effects, {
         type = "unlock-recipe",
         recipe = "icy-tarball"
@@ -9,12 +9,7 @@ if data.raw.technology["recycling"] then
         type = "unlock-recipe",
         recipe = "recycling-icy-tarball"
     })
-    
-    table.insert(data.raw.technology["recycling"].effects, {
-        type = "unlock-recipe",
-        recipe = "recycling-ice-enhanced"
-    })
-end
+--end
 
 -- Add enhanced scrap processing to a relevant technology (e.g., advanced material processing)
 if data.raw.technology["advanced-material-processing"] then
