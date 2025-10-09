@@ -20,13 +20,34 @@ data:extend({
     }
 })
 
+data:extend({
+    {
+        type = "recipe",
+        name = "tarball-oil",
+        category = "chemistry",
+        subgroup = "intermediate-product",
+        order = "g[tarball]",
+        icon = "__fulgora-enhanced-scrap__/graphics/tarball.png",
+        icon_size = 64,
+        enabled = false,
+        ingredients = {
+            {type = "fluid", name = "steam", amount = 50},
+            {type = "item", name = "tarball", amount = 1}
+        },
+        results = {
+            {type = "fluid", name = "crude-oil", amount = 25}
+        },
+        energy_required = 0.25,
+        allow_productivity = true
+    }
+})
 
-local ice_stone = table.deepcopy(data.raw.recipe['scrap-recycling'])
-ice_stone.name = "recycling-ice-stone"
-ice_stone.ingredients = {{type="item", name="ice", amount=1}}
-ice_stone.results = {
-    {type = "item", name = "stone", amount = 1, probability = 0.1}
-}
+--local ice_stone = table.deepcopy(data.raw.recipe['scrap-recycling'])
+--ice_stone.name = "recycling-ice-stone"
+--ice_stone.ingredients = {{type="item", name="ice", amount=1}}
+--ice_stone.results = {
+    --{type = "item", name = "stone", amount = 1, probability = 0.1}
+--}
 
 -- Add recycling recipe for ice to create stone
 -- data:extend({ ice_stone })
@@ -48,7 +69,7 @@ icy_tarball.icons = {
 icy_tarball.ingredients = {{type="item", name="icy-tarball", amount=1}}
 icy_tarball.results = {
     {type = "item", name = "ice", amount = 1, probability = 0.5},
-    {type = "item", name = "coal", amount = 1, probability = 0.45}
+    {type = "item", name = "tarball", amount = 1, probability = 0.35},
 }
 
 -- Add recycling recipe for ice to create stone

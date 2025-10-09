@@ -4,6 +4,11 @@
         type = "unlock-recipe",
         recipe = "icy-tarball"
     })
+
+    table.insert(data.raw.technology["recycling"].effects, {
+        type = "unlock-recipe",
+        recipe = "tarball-oil"
+    })
     
     table.insert(data.raw.technology["recycling"].effects, {
         type = "unlock-recipe",

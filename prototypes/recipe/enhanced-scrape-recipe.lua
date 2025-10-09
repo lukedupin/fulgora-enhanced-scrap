@@ -9,13 +9,13 @@ data:extend({
         icon_size = 64,
         enabled = false,
         ingredients = {
-            {type = "fluid", name = "sludge", amount = 100},
+            {type = "fluid", name = "sludge", amount = 20},
             {type = "item", name = "scrap", amount = 1}
         },
         results = {
             {type = "item", name = "enhanced-scrap", amount = 1}
         },
-        energy_required = 1.0,
+        energy_required = 0.2,
         allow_productivity = true
     }
 })
