@@ -68,8 +68,8 @@ icy_tarball.icons = {
 }
 icy_tarball.ingredients = {{type="item", name="icy-tarball", amount=1}}
 icy_tarball.results = {
-    {type = "item", name = "ice", amount = 1, probability = 0.5},
-    {type = "item", name = "tarball", amount = 1, probability = 0.35},
+    {type = "item", name = "ice", amount = 1, probability = 0.4},
+    {type = "item", name = "tarball", amount = 1, probability = 0.6},
 }
 
 -- Add recycling recipe for ice to create stone
