@@ -46,7 +46,7 @@ data:extend({
 --ice_stone.name = "recycling-ice-stone"
 --ice_stone.ingredients = {{type="item", name="ice", amount=1}}
 --ice_stone.results = {
-    --{type = "item", name = "stone", amount = 1, probability = 0.1}
+    --{type = "item", name = "stone", amount = 1, independent_probability = 0.1}
 --}
 
 -- Add recycling recipe for ice to create stone
@@ -68,8 +68,8 @@ icy_tarball.icons = {
 }
 icy_tarball.ingredients = {{type="item", name="icy-tarball", amount=1}}
 icy_tarball.results = {
-    {type = "item", name = "ice", amount = 1, probability = 0.4},
-    {type = "item", name = "tarball", amount = 1, probability = 0.6},
+    {type = "item", name = "ice", amount = 1, independent_probability = 0.5},
+    {type = "item", name = "tarball", amount = 1, independent_probability = 0.5},
 }
 
 -- Add recycling recipe for ice to create stone

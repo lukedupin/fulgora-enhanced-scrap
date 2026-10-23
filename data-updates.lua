@@ -14,13 +14,13 @@ data.raw.item['scrap'].pictures =
 }
 
 data.raw.recipe['scrap-recycling']['results'] = {
-    {type = "item", name = "iron-gear-wheel", amount = 1, probability = 0.02},
-    {type = "item", name = "concrete", amount = 1, probability = 0.006},
-    {type = "item", name = "steel-plate", amount = 1, probability = 0.004},
-    {type = "item", name = "battery", amount = 1, probability = 0.008},
-    {type = "item", name = "advanced-circuit", amount = 1, probability = 0.003},
-    {type = "item", name = "processing-unit", amount = 1, probability = 0.006},
-    {type = "item", name = "low-density-structure", amount = 1, probability = 0.005},
-    {type = "item", name = "stone", amount = 1, probability = 0.005},
-    {type = "item", name = "holmium-ore", amount = 1, probability = 0.01}
+    {type = "item", name = "iron-gear-wheel", amount = 1, independent_probability = 0.02},
+    {type = "item", name = "concrete", amount = 1, independent_probability = 0.006},
+    {type = "item", name = "steel-plate", amount = 1, independent_probability = 0.004},
+    {type = "item", name = "battery", amount = 1, independent_probability = 0.008},
+    {type = "item", name = "advanced-circuit", amount = 1, independent_probability = 0.003},
+    {type = "item", name = "processing-unit", amount = 1, independent_probability = 0.006},
+    {type = "item", name = "low-density-structure", amount = 1, independent_probability = 0.005},
+    {type = "item", name = "stone", amount = 1, independent_probability = 0.005},
+    {type = "item", name = "holmium-ore", amount = 1, independent_probability = 0.01}
 }
