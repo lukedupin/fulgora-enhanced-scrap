@@ -2,7 +2,7 @@ data:extend({
     {
         type = "recipe",
         name = "icy-tarball",
-        category = "chemistry",
+        categories = {"chemistry"},
         subgroup = "intermediate-product",
         order = "g[icy-tarball]",
         icon = "__fulgora-enhanced-scrap__/graphics/frozen_tarball.png",
@@ -24,7 +24,7 @@ data:extend({
     {
         type = "recipe",
         name = "tarball-oil",
-        category = "chemistry",
+        categories = {"chemistry"},
         subgroup = "intermediate-product",
         order = "g[tarball]",
         icon = "__fulgora-enhanced-scrap__/graphics/tarball.png",
@@ -56,14 +56,14 @@ local icy_tarball = table.deepcopy(data.raw.recipe['scrap-recycling'])
 icy_tarball.name = "recycling-icy-tarball"
 icy_tarball.icons = {
     {
-        icon = "__quality__/graphics/icons/recycling.png"
+        icon = "__recycler__/graphics/icons/recycling.png"
     },
     {
         icon = "__fulgora-enhanced-scrap__/graphics/frozen_tarball.png",
         scale = 0.4
     },
     {
-        icon = "__quality__/graphics/icons/recycling-top.png"
+        icon = "__recycler__/graphics/icons/recycling-top.png"
     }
 }
 icy_tarball.ingredients = {{type="item", name="icy-tarball", amount=1}}

@@ -2,7 +2,7 @@ data:extend({
     {
         type = "recipe",
         name = "enhanced-scrap-processing",
-        category = "electromagnetics", -- Can only be made in electromagnetic plants
+        categories = {"electromagnetics"}, -- Can only be made in electromagnetic plants
         subgroup = "other",
         order = "a[enhanced-scrap]",
         icon = "__space-age__/graphics/icons/scrap.png",
